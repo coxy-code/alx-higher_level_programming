@@ -7,5 +7,3 @@ def uppercase(s):
         else:
             result += letter
     print(result)
-
-uppercase("holberton")
