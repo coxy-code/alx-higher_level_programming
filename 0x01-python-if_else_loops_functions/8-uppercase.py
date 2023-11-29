@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-def uppercase(str):
-    for iterator in str:
-        temp = iterator
-        if ord(temp) >= 97 and ord(temp) <= 122:
-            temp = chr(ord(iterator) - 32)
-            print ("{}".format(temp), end='')
-        print()
+def uppercase(s):
+    result = ''
+    for letter in s:
+        if ord('a') <= ord(letter) <= ord('z'):
+            result += chr(ord(letter) - 32)
+        else:
+            result += letter
+    print(result)
+
+uppercase("holberton")
