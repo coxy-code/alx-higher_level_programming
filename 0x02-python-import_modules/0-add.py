@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 a = 1
 b = 2
-add_0 = __import__('add_0').add
-print("{} + {} = {}".format(a, b, add_0(a, b)))
+# Importing add function from add_0.py
+from add_0 import add
+
+# Using string formatting to print the result
+print("{} + {} = {}".format(a, b, add(a, b)))
