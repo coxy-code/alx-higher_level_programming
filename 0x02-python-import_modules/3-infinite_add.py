@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    import sys, math
+    import sys
     result = 0
-    for i in sys.argv:
-        result += int(i)
-        print("{}".format(result))
+    for arg in sys.argv[1:]:  # Start from the second element to skip the script name
+        result += int(arg)
+    print(result)
