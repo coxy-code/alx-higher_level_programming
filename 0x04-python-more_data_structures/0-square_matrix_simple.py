@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 
 def square_matrix_simple(matrix=[]):
-    # Create a new matrix to store squared values (deep copy)
     new_matrix = [row[:] for row in matrix]
-    for i in range(len(matrix)):
-        for j in range(len(matrix[i])):
-            new_matrix[i][j] = matrix[i][j] ** 2  # Square the value
-        return new_matrix
+    for idx, row in enumerate(new_matrix):
+        for idx2, col in enumerate(new_matrix):
+            new_matrix[idx][idx2] = row[idx2] ** 2
+    return new_matrix 
